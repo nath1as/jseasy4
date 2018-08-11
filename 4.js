@@ -3,11 +3,15 @@ function findDup(array) {
   var i;
 
   for (i = 0; i < array.length; i += 1) {
-    if (seen[array[i]]) {
+    if (array.indexOf(array[i]) !== array.lastIndexOf(array[i])) {
       console.log(array[i]);
-    } else {
-      seen[array[i]] = true;
+      break;
     }
+    // if (seen[array[i]]) {
+    //   console.log(array[i]);
+    // } else {
+    //   seen[array[i]] = true;
+    // }
   }
 }
 
